@@ -231,8 +231,8 @@ address {
     margin-right: 10px;
 }
 
-.header-mail-icon:hover,
-.header-tel-icon:hover {
+.header-mail-icon:hover, .header-mail-icon:focus, 
+.header-tel-icon:hover, .header-tel-icon:focus {
     fill: var(--brand-color-blue);
 }
 
@@ -393,7 +393,11 @@ address {
     height: 44px;
 }
 
-.socials-icon:hover {
+.socials-icon {
+    fill: var(--icons-color);
+}
+
+.socials-icon:hover, .socials-icon:focus {
     fill: var(--white-color);
 }
 
@@ -402,12 +406,6 @@ address {
     background-color: var(--brand-color-blue);
     border-radius: 50%;
 }
-
-.socials-icon {
-    fill: var(--icons-color);
-}
-
-
 
 /* ---------------PORTFOLIO SECTION--------------- */
 
@@ -481,11 +479,11 @@ address {
     fill: var(--icons-color);
 }
 
-.clients-logo:hover {
+.clients-logo:hover, .clients-logo:focus {
 border-color: var(--brand-color-blue);
 }
 
-.logo-icon:hover {
+.logo-icon:hover, .logo-icon:focus {
     fill: var(--brand-color-blue)
 }
 
@@ -559,14 +557,11 @@ border-color: var(--brand-color-blue);
     align-items: center;
     width: 20px;
     height: 20px;
+    fill: var(--white-color);
 }
 
 .footer-socials-item:hover {
     background-color: var(--brand-color-blue);
-}
-
-.footer-socials-icon:hover {
-    fill: var(--white-color);
 }
 
 /* ---------------HIDE TITLES--------------- */
