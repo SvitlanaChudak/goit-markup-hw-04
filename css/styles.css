@@ -10,6 +10,7 @@
     --frame-color: #ECECEC;
     --button-hover-focus-color: #188CE8;
     --stroke-color: #EEEEEE;
+    --icons-color: #AFB1B8;
     --main-font: Roboto, sans-serif;
     --secondary-font: Raleway, sans-serif;
 }
@@ -139,6 +140,7 @@ address {
 .portfolio-button:active {
     color: var(--white-color);
     background-color: var(--brand-color-blue);
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------------LOGO--------------- */
@@ -197,11 +199,13 @@ address {
 .header-list-contacts {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .header-item:not(:last-child) {
     margin-right: 50px;
 }
+
 
 .header-mail {
     margin-right: 50px;
@@ -211,13 +215,41 @@ address {
     color: var(--brand-color-blue);
 }
 
+.header-mail-icon {
+    width: 16px;
+    height: 12px;
+    fill: var(--primary-text-color);
+}
+
+.header-tel-icon {
+    width: 10px;
+    height: 16px;
+    fill: var(--primary-text-color);
+}
+
+.header-mail-icon, .header-tel-icon {
+    margin-right: 10px;
+}
+
+.header-mail-icon:hover,
+.header-tel-icon:hover {
+    fill: var(--brand-color-blue);
+}
+
 /* ---------------HERO SECTION--------------- */
 
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-    background-color: var(--dark-background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    height: 600px;
 }
 
 .hero-title {
@@ -248,6 +280,7 @@ address {
 }
 
 .benefits-title {
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -267,6 +300,20 @@ address {
 .benefits-desc {
     font-size: 14px;
     line-height: 1.71;
+}
+
+.benefits-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--light-background-color);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
 }
 
 /* ---------------ABOUT SECTION--------------- */
@@ -303,9 +350,10 @@ address {
 
 .team-item {
     max-width: 270px;
-    height: 368px;
+    height: 428px;
     background-color: var(--white-color);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .team-card {
@@ -327,7 +375,39 @@ address {
     line-height: 1.18;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 16px;
 }
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+}
+
+.socials-icon:hover {
+    fill: var(--white-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+    background-color: var(--brand-color-blue);
+    border-radius: 50%;
+}
+
+.socials-icon {
+    fill: var(--icons-color);
+}
+
+
 
 /* ---------------PORTFOLIO SECTION--------------- */
 
@@ -364,10 +444,49 @@ address {
     line-height: 1.88;
 }
 
+.item-portfolio:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .portfolio-link:focus,
 .portfolio-link:hover,
 .portfolio-link:active {
     color: inherit;
+}
+
+/* ---------------CLIENTS SECTION--------------- */
+.clients-logo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
+}
+
+.logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 60px;
+    fill: var(--icons-color);
+}
+
+.clients-logo:hover {
+border-color: var(--brand-color-blue);
+}
+
+.logo-icon:hover {
+    fill: var(--brand-color-blue)
 }
 
 /* ---------------FOOTER--------------- */
@@ -376,6 +495,7 @@ address {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--dark-background-color);
+    
 }
 
 .contatcs-address {
@@ -398,6 +518,55 @@ address {
 .mail,
 .phone {
     color: var(--footer-contacts-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 70px;
+}
+
+.footer-socials-title {
+    font: var(--main-font);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.footer-socials-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-socials-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-socials-item:hover {
+    background-color: var(--brand-color-blue);
+}
+
+.footer-socials-icon:hover {
+    fill: var(--white-color);
 }
 
 /* ---------------HIDE TITLES--------------- */
