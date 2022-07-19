@@ -540,7 +540,7 @@ address {
     gap: 10px;
 }
 
-.footer-socials-item {
+.footer-socials-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -556,7 +556,7 @@ address {
     fill: var(--white-color);
 }
 
-.footer-socials-item:hover {
+.footer-socials-link:hover {
     background-color: var(--brand-color-blue);
 }
 
